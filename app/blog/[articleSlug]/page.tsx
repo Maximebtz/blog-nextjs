@@ -27,13 +27,13 @@ const ArticlePage = async ({ params }: { params: { articleSlug: string } }) => {
     
     return (
         <div className='max-w-4xl w-full flex flex-col gap-8'>
-            <BackButton href="/blog" label="Back" />
+            <BackButton href="/blog" label="Back"  />
             <div>
                 <h1 className='text-3xl font-bold flex items-center gap-4'>
                     {article.title}
                     <div className='flex items-center gap-2'>
                         {article.tags.map((tagArticle) => (
-                            <span key={tagArticle.tag.id} className='text-sm text-zinc-400  bg-zinc-950 w-max px-2 py-1 rounded-full'>
+                            <span key={tagArticle.tag.id} className='text-sm text-white  bg-zinc-950 w-max px-3 py-1 rounded-full'>
                                 {tagArticle.tag.name}
                             </span>
                         ))}
