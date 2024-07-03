@@ -1,7 +1,5 @@
 import ArticleCard from '@/components/ArticleCard';
 import { db } from '@/lib/db';
-import { formatDate } from '@/lib/utils';
-import Link from 'next/link';
 import React from 'react'
 
 const BlogPage = async () => {
@@ -18,6 +16,8 @@ const BlogPage = async () => {
             },
         },
     });
+
+
 
     if (!articles || articles.length === 0) {
         return <p>Articles not found</p>;
