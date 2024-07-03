@@ -1,0 +1,10 @@
+model TagArticle {
+    id String @id @default(auto()) @map("_id") @db.ObjectId
+    articleId String @db.ObjectId
+    article Article @relation(fields: [articleId], references: [id])
+    tagId String @db.ObjectId
+    tag Tag @relation(fields: [tagId], references: [id])
+
+    @@index([articleId])
+    @@index([tagId])
+}
