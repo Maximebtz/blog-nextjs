@@ -4,7 +4,6 @@ import BackButton from '@/components/BackButton';
 import CommentCard from '@/components/CommentCard';
 import { db } from '@/lib/db';
 import { formatDate } from '@/lib/utils';
-import Link from 'next/link';
 import React from 'react'
 
 const ArticlePage = async ({ params }: { params: { articleSlug: string } }) => {
@@ -26,9 +25,6 @@ const ArticlePage = async ({ params }: { params: { articleSlug: string } }) => {
         return <p>Article not found</p>;
     } 
 
-    
-    
-    
     return (
         <div className='max-w-4xl w-full flex flex-col gap-8'>
             <BackButton href="/blog" label="Back"  />
