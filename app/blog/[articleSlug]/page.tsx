@@ -29,9 +29,9 @@ const ArticlePage = async ({ params }: { params: { articleSlug: string } }) => {
         <div className='max-w-4xl w-full flex flex-col gap-8'>
             <BackButton href="/blog" label="Back"  />
             <div>
-                <h1 className='text-3xl font-bold flex items-center gap-4'>
+                <h1 className='text-3xl font-bold flex justify-between items-center gap-4'>
                     {article.title}
-                    <div className='flex items-center gap-2'>
+                    <div className='flex flex-wrap items-center gap-2 max-w-xs justify-end'>
                         {article.tags.map((tagArticle) => (
                             <span key={tagArticle.tag.id} className='text-sm text-white  bg-zinc-950 w-max px-3 py-1 rounded-full'>
                                 {tagArticle.tag.name}
