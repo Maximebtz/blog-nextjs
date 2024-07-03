@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import BackButton from '@/components/BackButton';
 import CommentCard from '@/components/CommentCard';
 import { db } from '@/lib/db';
@@ -6,6 +8,7 @@ import Link from 'next/link';
 import React from 'react'
 
 const ArticlePage = async ({ params }: { params: { articleSlug: string } }) => {
+
 
     const article = await db.article.findUnique({ 
         where: { slug: params.articleSlug }, // This is the slug from the URL
@@ -17,12 +20,13 @@ const ArticlePage = async ({ params }: { params: { articleSlug: string } }) => {
             },
             comments: true
         },
-
-     })
+    })
 
     if (!article) {
         return <p>Article not found</p>;
     } 
+
+    
     
     
     return (
