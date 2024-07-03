@@ -1,3 +1,5 @@
+import BackButton from '@/components/BackButton';
+import CommentCard from '@/components/CommentCard';
 import { db } from '@/lib/db';
 import { formatDate } from '@/lib/utils';
 import Link from 'next/link';
@@ -13,20 +15,19 @@ const ArticlePage = async ({ params }: { params: { articleSlug: string } }) => {
                     tag: true,
                 }
             },
+            comments: true
         },
+
      })
 
     if (!article) {
         return <p>Article not found</p>;
-    }
+    } 
     
     
     return (
         <div className='max-w-4xl w-full flex flex-col gap-8'>
-            <Link href={"/blog"} className='text-sm text-zinc-400  bg-zinc-950 w-max px-2 py-1 rounded-full hover:opacity-60 duration-200 transition'>
-                Back
-                
-            </Link>
+            <BackButton href="/blog" label="Back" />
             <div>
                 <h1 className='text-3xl font-bold flex items-center gap-4'>
                     {article.title}
@@ -45,7 +46,16 @@ const ArticlePage = async ({ params }: { params: { articleSlug: string } }) => {
             <p>
                 {article.text}
             </p>
-
+            <div className=''>
+                <h3 className='font-semibold text-xl'>
+                    Commentaires <span>({article.comments.length})</span>
+                </h3>
+                <div className='space-y-6 py-8 sm:columns-2 sm:gap-6 xl:columns-3'>   
+                    {article.comments.map((comment) => (    
+                        <CommentCard key={comment.id} comment={comment} />
+                    ))}
+                </div>
+            </div>
         </div>
     )
 }
