@@ -24,7 +24,7 @@ const BlogPage = async () => {
     }
 
     return (
-        <div className='max-w-7xl w-full flex flex-col gap-8 '>
+        <div className='max-w-7xl w-full flex flex-col gap-8 mt-16'>
             <div className='flex flex-col gap-2'>
                 <h1 className='font-bold text-4xl'>
                     Blog

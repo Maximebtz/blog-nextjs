@@ -26,7 +26,7 @@ const ArticlePage = async ({ params }: { params: { articleSlug: string } }) => {
     } 
 
     return (
-        <div className='max-w-7xl w-full flex flex-col gap-8'>
+        <div className='max-w-7xl w-full flex flex-col gap-8 mt-16'>
             <BackButton href="/blog" label="Back"  />
             <div>
                 <h1 className='text-3xl font-bold flex justify-between items-center gap-4'>

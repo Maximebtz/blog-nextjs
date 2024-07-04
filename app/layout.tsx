@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
+import Link from "next/link";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,21 +19,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className='min-h-svh'>
         <header className="w-full h-40 flex justify-center ">
           <div className="max-w-7xl w-full flex items-center justify-between sm:px-16 px-6">
-            <Image
-              src="/img/logo/logo-spark.png"
-              alt="Logo"
-              width={32}
-              height={32}
-            />
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="w-8 h-8" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-            </svg>
+            <Link href="/blog">
+              <Image
+                src="/img/logo/logo-spark.png"
+                alt="Logo"
+                width={32}
+                height={32}
+              />
+            </Link>
+            <div className="flex items-center gap-4">
+              <Link
+                href="/blog/article/new"
+                className="text-white bg-zinc-950 hover:bg-zinc-800 rounded-full px-4 py-2 transition duration-200"
+              >
+                Créer un article
+              </Link>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="w-8 h-8" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+              </svg>
+            </div>
           </div>
         </header>
-        <main className="relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6 mt-16">
+        <main className="relative z-10 flex justify-center min-h-[calc(100svh-160px-4rem)] items-center flex-col max-w-7xl mx-auto sm:px-16 px-6">
           {children}
         </main>
       </body>
