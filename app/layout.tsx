@@ -48,7 +48,7 @@ export default function RootLayout({
         </main>
         <footer className="bg-zinc-950 text-white ">
           <div>
-            <div className="max-w-7xl h-96 mx-auto py-8 px-16 flex flex-wrap justify-between items-center">
+            <div className="max-w-7xl h-80 mx-auto py-8 px-16 flex flex-wrap justify-between items-center">
               <div>
                 <Image
                   src="/img/logo/logo-spark.png"
@@ -58,7 +58,7 @@ export default function RootLayout({
                   className="mix-blend-difference"
                 />
               </div>
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-4 text-lg">
                 <div className="flex gap-8">
                   <Link href="/blog" className="hover:opacity-60 transition duration-200">
                     Blog
