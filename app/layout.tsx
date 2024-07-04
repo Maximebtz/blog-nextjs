@@ -46,6 +46,44 @@ export default function RootLayout({
         <main className="relative z-10 flex justify-center min-h-[calc(100svh-160px-4rem)] items-center flex-col max-w-7xl mx-auto sm:px-16 px-6">
           {children}
         </main>
+        <footer className="bg-zinc-950 text-white ">
+          <div>
+            <div className="max-w-7xl h-96 mx-auto py-8 px-16 flex flex-wrap justify-between items-center">
+              <div>
+                <Image
+                  src="/img/logo/logo-spark.png"
+                  alt="Logo"
+                  width={64}
+                  height={64}
+                  className="mix-blend-difference"
+                />
+              </div>
+              <div className="flex flex-col gap-4">
+                <div className="flex gap-8">
+                  <Link href="/blog" className="hover:opacity-60 transition duration-200">
+                    Blog
+                  </Link>
+                  <Link href="/" className="hover:opacity-60 transition duration-200">
+                    Créer un article
+                  </Link>
+                </div>
+                <div className="flex justify-between gap-8 ">
+                  <Link href="/" className="hover:opacity-60 transition duration-200">
+                    À propos
+                  </Link>
+                  <Link href="/" className="hover:opacity-60 transition duration-200">
+                    Contact
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="max-w-7xl mx-auto py-8">
+            <p className="text-center text-sm text-zinc-500">
+              &copy; 2021 Spark. All rights reserved.
+            </p>
+          </div>
+        </footer>
       </body>
     </html>
   );
