@@ -20,7 +20,7 @@ interface ArticleCardProps {
 
 const ArticleCard = ({ article }: ArticleCardProps) => {
   return (
-    <Link href={`/blog/${article.slug}`} key={article.id} className='flex flex-col gap-2 border border-zinc-950  rounded-md p-6 hover:-translate-y-1 transition duration-200 flex-1 break-inside-avoid  bg-clip-padding backdrop-blur-lg backdrop-filter md:w-[360px] w-full h-fit'>
+    <Link href={`/blog/${article.slug}`} key={article.id} className='flex flex-col gap-2 border border-zinc-950  rounded-md p-6 hover:-translate-y-1 transition duration-200 flex-1 break-inside-avoid  bg-clip-padding backdrop-blur-lg backdrop-filter md:w-[360px] w-full h-fit shadow-md hover:shadow-lg'>
       <div>
         <h2 className='text-2xl font-semibold'>
           {article.title}
@@ -34,7 +34,7 @@ const ArticleCard = ({ article }: ArticleCardProps) => {
       </p>
       <div className='flex gap-2 flex-wrap'>
         {article.tags.map((tagArticle) => (
-          <span key={tagArticle.tag.id} className='text-sm text-white  bg-zinc-950 w-max px-2 py-1 rounded-full'>
+          <span key={tagArticle.tag.id} className='text-sm text-white  bg-zinc-950 w-max px-3 py-1 rounded-full'>
             {tagArticle.tag.name}
           </span>
         ))}

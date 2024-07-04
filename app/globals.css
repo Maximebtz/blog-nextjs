@@ -1,16 +1,4 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-
-body {
-  background-color: whitesmoke;
-  color: #0a0a0a;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+  @tailwind components;
+  @tailwind utilities;
+  
