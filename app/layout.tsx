@@ -43,7 +43,7 @@ export default function RootLayout({
             </div>
           </div>
         </header>
-        <main className="relative z-10 flex justify-center min-h-[calc(100svh-160px-4rem)] items-center flex-col max-w-7xl mx-auto sm:px-16 px-6">
+        <main className="relative z-10 flex justify-center min-h-[calc(100svh-160px)] items-center flex-col max-w-7xl mx-auto sm:px-16 px-6 pb-16">
           {children}
         </main>
         <footer className="bg-zinc-950 text-white ">

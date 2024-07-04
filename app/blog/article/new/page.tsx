@@ -82,7 +82,7 @@ const ArticleForm = () => {
 
   return (
     <Form {...form}>
-      <form  onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col justify-center space-y-8 w-1/2 h-full">
+      <form  onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col justify-center space-y-8 w-1/2 h-full mb-20">
       <h1 className="text-4xl mb-16 w-full font-bold">
         Créez un nouveau post ! 👽
       </h1>
@@ -92,7 +92,7 @@ const ArticleForm = () => {
           render={({ field }) => (
             <FormItem>
               <div>
-                <FormLabel>Titre</FormLabel>
+                <FormLabel className="text-lg">Titre</FormLabel>
                 <FormDescription>
                   Titre de l'article
                 </FormDescription>
@@ -110,7 +110,7 @@ const ArticleForm = () => {
           render={({ field }) => (
             <FormItem>
               <div>
-                <FormLabel>Text</FormLabel>
+                <FormLabel className="text-lg">Texte</FormLabel>
                 <FormDescription>
                   Contenu de l'article
                 </FormDescription>
