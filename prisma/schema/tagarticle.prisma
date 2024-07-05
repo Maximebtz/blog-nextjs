@@ -3,7 +3,7 @@ model TagArticle {
     articleId String @db.ObjectId
     article Article @relation(fields: [articleId], references: [id])
     tagId String @db.ObjectId
-    tag Tag @relation(fields: [tagId], references: [id])
+    tag Tag @relation(fields: [tagId], references: [id], onDelete: Cascade)
 
     @@index([articleId])
     @@index([tagId])

@@ -6,7 +6,7 @@ model Article {
  
     createdAt DateTime @default(now())
  
-    comments Comment[]
+    comments Comment[] 
  
     tags TagArticle[]
 }
